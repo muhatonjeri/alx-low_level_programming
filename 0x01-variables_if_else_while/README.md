@@ -1,1 +1,1 @@
-I sometimes suffer from insomnia. And when I cannot fall asleep, I play what I call the alphabet game 
+Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
