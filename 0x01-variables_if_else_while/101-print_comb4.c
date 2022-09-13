@@ -2,7 +2,7 @@
 
 /**
 
- * main - Prints all combinations of two digits with,
+ * main - prints all combinations of three digits with,
 
  * and space followed by new line
 
@@ -16,35 +16,45 @@ int main(void)
 
 {
 
-	int digit1, digit2;
+	int hund;
+
+	int tens;
+
+	int ones;
 
 
 
-	for (digit1 = 0; digit1 < 9; digit1++)
+	for (hund = 0; hund <= 9; hund++)
 
 	{
 
-		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
+		for (tens = hund + 1; tens <= 9; tens++)
 
 		{
 
+			for (ones = tens + 1; ones <= 9; ones++)
 
+			{
 
-			putchar((digit1 % 10) + '0');
+				putchar(hund + '0');
 
-			putchar((digit2 % 10) + '0');
+				putchar(tens + '0');
 
-
-
-			if (digit1 == 8 && digit2 == 9)
-
-				continue;
+				putchar(ones + '0');
 
 
 
-			putchar(',');
+				if (hund < 7)
 
-			putchar(' ');
+				{
+
+					putchar(',');
+
+					putchar(' ');
+
+				}
+
+			}
 
 		}
 
