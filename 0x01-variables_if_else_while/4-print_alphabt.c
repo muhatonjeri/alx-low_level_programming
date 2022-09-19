@@ -1,43 +1,21 @@
 #include <stdio.h>
-
-#include <stdio.h>
-
 /**
-
- * main - Program to alphabet letters ecxept q and e followed by new line
-
+ * main - print if the number is postive, zero, or negative
  *
-
- * Return: return 0
-
+ * Description: using the main function
+ * this program prints "Programming is positive, zero, or negative
+ * Return: 0
  */
-
 int main(void)
-
 {
-
-	int letter;
-
-
-
-	for (letter = 'a'; letter <= 'z'; letter++) 
-
-	{
-
-		if (letter == 'q' || letter == 'e') 
-
-		{
-
-			continue;
-
-		}
-
-		putchar(letter);
-
-	}
-
-	putchar ('\n');  
-
-	return (0);  
-
+char ch;
+for (ch = 'a' ; ch <= 'z' ; ch++)
+{
+if (ch != 'e' && ch != 'q')
+{
+	putchar(ch);
+}
+}
+putchar('\n');
+return (0);
 }

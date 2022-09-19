@@ -1,55 +1,22 @@
 #include <stdio.h>
-
-#include <ctype.h>
-
 /**
-
- * main - Program to print alphabet letter in all cases followed by new line
-
+ * main - print if the number is postive, zero, or negative
  *
-
- * Return: return 0
-
+ * Description: using the main function
+ * this program prints "Programming is positive, zero, or negative
+ * Return: 0
  */
-
 int main(void)
-
 {
-
-	int letter;
-
-
-
-	for (letter = 'a'; letter <= 'z'; letter++)
-
-	{
-
-		letter = tolower(letter);
-
-		putchar(letter);
-
-		if (letter == 'z')
-
-		{
-
-			letter = 'A';
-
-			for (; letter <= 'Z'; letter++)
-
-			{
-
-				putchar(letter);
-
-			}
-
-			break;
-
-		}
-
-	}
-
-	putchar('\n');
-
-	return (0);
-
+char ch;
+for (ch = 'a' ; ch <= 'z' ; ch++)
+{
+	putchar(ch);
+}
+for (ch = 'A' ; ch <= 'Z' ; ch++)
+{
+	putchar(ch);
+}
+putchar('\n');
+return (0);
 }
