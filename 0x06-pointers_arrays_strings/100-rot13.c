@@ -1,46 +1,27 @@
 #include "main.h"
 
 /**
- * rot13 - rot13 encoder
- * @str: string to be encoded
+ * rot13 - encodes a string into rot13
+ * @s: string to encode
  *
- * Return: address of the encoded string
+ * Return: address of s
  */
-
-char *rot13(char *str)
+char *rot13(char *s)
 {
-	int i = 0;
+	int i, j;
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	while (str[i] != '\0')
+	for (i = 0; *(s + i); i++)
 	{
-		str[i] = transform_2(str[i]);
-		i++;
-	}
-	return (str);
-}
-
-/**
- * transform_2 - helper function to map a letter with it's rot13 encoding
- * @x: char to be encoded
- *
- * Return: the encoded char
- */
-
-char transform_2(char x)
-{
-	char one[52] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char two[52] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	int i = 0;
-	char replacement = x;
-
-	while (i < 52)
-	{
-		if (x == one[i])
+		for (j = 0; j < 52; j++)
 		{
-			replacement = two[i];
-			break;
+			if (a[j] == *(s + i))
+			{
+				*(s + i) = b[j];
+				break;
+			}
 		}
-		i++;
 	}
-	return (replacement);
+	return (s);
 }
