@@ -1,5 +1,7 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef MAIN_H
+#define MAIN_H
+
+#include <stdlib.h>
 
 int _putchar(char);
 char *create_array(unsigned int size, char c);
@@ -10,4 +12,4 @@ void free_grid(int **grid, int height);
 char *argstostr(int ac, char **av);
 char **strtow(char *str);
 
-#endif /* _MAIN_H_ */
+#endif /* MAIN_H */
