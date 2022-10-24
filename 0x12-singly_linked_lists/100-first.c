@@ -1,14 +1,14 @@
 #include <stdio.h>
 
-void first(void) __attribute__ ((constructor));
+void start_up_func(void)__attribute__((constructor));
 
 /**
- * first - prints something before main
+ * start_up_func - function that get's executed before the main function
  *
  * Return: void
  */
-void first(void)
+void start_up_func(void)
 {
-	printf("You're beat! and yet, you must allow,\n");
-	printf("I bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n"
+	       "I bore my house upon my back!\n");
 }
